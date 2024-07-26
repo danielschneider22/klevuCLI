@@ -68,7 +68,7 @@ const HitsUI = (): JSX.Element => {
   return <div>
     {pageContext?.records &&
       <>
-        <Hits data = {pageContext.records} clickEvent={pageContext.searchClickEvent} />
+        <Hits data = {pageContext.records} clickEvent={pageContext.searchClickEvent?.bind(pageContext)} />
         <div className="py-10">
           <Pagination page={pageContext}/>
         </div>
